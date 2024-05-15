@@ -1,5 +1,7 @@
 import React from 'react'
 import {useState} from 'react'
+
+
 function Home() {
     const[click, setClick] = useState(" Where Nature Meets Innovation");
     const handleChange=()=>{
@@ -12,6 +14,7 @@ function Home() {
                 <h1 className="text-4xl font-bold">Welcome to Wild Agriculture</h1>
                 <button onClick ={handleChange} className="mt-4 bg-blue-700 text-white px-4 py-2 rounded">{click}</button>
             </div>
+            
         </>
     )
 }
