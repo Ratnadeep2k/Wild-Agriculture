@@ -4,7 +4,7 @@ function About() {
     return (
         <>
             <h1 className='mb-4 text-3xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-gray-500'>Welcome to WildAgriculture: </h1>
-            <h2 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-gray-500">Where Nature <span class="underline underline-offset-3 decoration-8 decoration-green-400 dark:decoration-green-600">Meets Innovation</span></h2>
+            <h2 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-gray-500">Where Nature <span class="underline underline-offset-3 decoration-8 decoration-green-400 dark:decoration-green-600">Meets Innovation</span></h2>
             <p className='text-2xl flex'>
                 At WildAgriculture, we are passionate about revolutionizing the agricultural industry by
                 embracing the power of nature and innovation. Our mission is to empower farmers, growers,
