@@ -3,7 +3,7 @@ import React from 'react'
 function Contact() {
   return (
     <>
-      <h1 className='text-3xl font-bold text-gray-900 dark:text-gray-600 text-center mt-5 mb-5'>Get in Touch with us</h1>
+      <h1 className='text-3xl font-bold text-gray-900 dark:text-gray-600 text-center mt-5 mb-5'>Join Us </h1>
     
       <form class="max-w-sm mx-auto block p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 ">
         <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
