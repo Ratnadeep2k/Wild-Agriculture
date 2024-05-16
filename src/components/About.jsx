@@ -5,11 +5,9 @@ function About() {
     return (
         <>
 
-            <p className='text-2xl flex flex-wrap justify-cente ml-2'>
+            <p className='text-2xl flex flex-wrap justify-cente ml-3'>
             
                <Card/>
-               <div className="ml-3">
-               </div>
                <Card/>
                <Card/>
                <Card/>
