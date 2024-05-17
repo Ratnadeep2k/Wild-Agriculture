@@ -1,28 +1,26 @@
-import React from 'react'
+import React from 'react';
 import {useState} from 'react'
-
-
-
-function Home() {
-
-    
-    const[click, setClick] = useState(" Where Nature Meets Innovation");
-    const handleChange=()=>{
-        setClick("I am Tonmoy, Welcome to our page");
-    }
-    return (
-        <>
-            
-            <div className="flex flex-col items-center justify-center h-screen bg-green-100 bg">
-                <h1 className="text-4xl flex mx-auto px-4 font-bold mb-5 font-mono">Welcome</h1>
-                <h2 className='text-4xl font-bold mx-auto px-4 flex subpixel-antialiased italic '>To Wild Agriculture</h2>
-                
-                <button onClick ={handleChange} className="mt-4 bg-blue-700 text-white px-4 py-2 rounded">{click}</button>
-                
-            </div>
-            
-        </>
-    )
+function Hero() {
+    const [isClick,setIsClick] = useState('Explore')
+  return (
+    <div className="relative bg-cover bg-center h-screen" style={{ backgroundImage: "url('https://source.unsplash.com/1600x900/?agriculture')" }}>
+      <div className="absolute inset-0 bg-black opacity-50"></div>
+      <div className="container mx-auto flex flex-col items-center justify-center h-full relative z-10 px-4 text-center">
+        <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
+          Welcome to Wild Agriculture
+        </h1>
+        <p className="text-lg md:text-2xl text-gray-300 mt-4">
+          Sustainable farming for a better future.
+        </p>
+        <button
+          onClick={()=>setIsClick('Thank you for Visiting us')}
+          className="mt-8 px-8 py-4 text-lg font-medium text-white bg-green-600 rounded-full hover:bg-green-700 transition duration-300 ease-in-out"
+        >
+          {isClick}
+        </button>
+      </div>
+    </div>
+  );
 }
 
-export default Home
+export default Hero;
