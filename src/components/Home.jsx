@@ -1,21 +1,8 @@
 // src/components/Hero.js
 import React, { useState, useEffect } from 'react';
-import SkeletonHero from '../utils/SkeletonHero';
 
 function Hero() {
   const [isClick, setIsClick] = useState('Explore');
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    // Simulate a loading delay
-    const timer = setTimeout(() => setLoading(false), 2000);
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (loading) {
-    return <SkeletonHero />;
-  }
-
   return (
     <div className="relative bg-cover bg-center h-screen" style={{ backgroundImage: "url('https://source.unsplash.com/1600x900/?agriculture')" }}>
       <div className="absolute inset-0 bg-black opacity-50"></div>
