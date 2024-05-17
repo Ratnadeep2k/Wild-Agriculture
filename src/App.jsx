@@ -7,7 +7,6 @@ import Services from './components/Services'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Card from './components/Card'
-
 function App() {
   return (
     <>
@@ -19,7 +18,6 @@ function App() {
       <Route path='/about' element={<About />} />
       <Route path='/services' element={<Services/>} />
       <Route path='/card' element={<Card/>} />
-  
     </Routes>
     <Footer />
     </Router>

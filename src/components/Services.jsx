@@ -1,6 +1,8 @@
 import React from 'react'
 
 function Services() {
+  
+
   return (
     <>
   <div className='mx-auto px-4'>
@@ -24,9 +26,6 @@ function Services() {
         </svg>
       </a>
       </div>
-
-
-
     </>
   )
 }
