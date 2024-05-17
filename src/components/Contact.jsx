@@ -1,11 +1,23 @@
 import React from 'react'
 import emailjs from '@emailjs/browser';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Contact() {
   const [name,setName] = useState('')
   const [email,setEmail] = useState('')
   const [message,setMessage] = useState('')
+  const navigate = useNavigate();
+  const notify = () => toast("Your Message Sent Successfully!");
+  
+  const OnBtnClick =()=>{
+    setEmail(" ")
+    setMessage(" ")
+    setName(" ")
+    navigate('/')
+  }
 
   const handleSubmit =(e)=>{
       e.preventDefault();
@@ -16,15 +28,13 @@ function Contact() {
       const templateParams ={
           from_name: name,
           from_email: email,
-         to_name :'Wild Agriculture',
+          to_name :'Wild Agriculture',
           message: message,
       
       };
       emailjs.send(serviceId,templateId,templateParams,publicKey).then((response)=>{
           console.log('SUCCESS!',response.status,response.text);
-          setName =('');
-          setEmail=('');
-          setMessage=('');
+          OnBtnClick();
       },(error)=>{
           console.log('FAILED...',error);
       });
@@ -72,12 +82,14 @@ function Contact() {
           className='w-full px-3 py-2 placeholder-gray-400 border rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm'
         ></textarea>
       </div>
-      <button
+      <button 
+        onClick={notify}
         type='submit'
         className='w-full px-4 py-2 text-white bg-indigo-500 rounded-md hover:bg-indigo-600 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500'
       >
         Send Email
       </button>
+      <ToastContainer />
     </form>
     </>
   )
