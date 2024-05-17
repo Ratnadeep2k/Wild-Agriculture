@@ -3,7 +3,7 @@ import React from 'react'
 function Services() {
   return (
     <>
-
+  <div className='mx-auto px-4'>
 
       <h2 className="text-4xl font-extrabold dark:text-white">Payments tool for companies</h2>
       <p className="my-4 text-lg text-gray-500">Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.</p>
@@ -23,6 +23,7 @@ function Services() {
           <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
         </svg>
       </a>
+      </div>
 
 
 
