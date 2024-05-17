@@ -1,7 +1,21 @@
-import React from 'react';
-import {useState} from 'react'
+// src/components/Hero.js
+import React, { useState, useEffect } from 'react';
+import SkeletonHero from '../utils/SkeletonHero';
+
 function Hero() {
-    const [isClick,setIsClick] = useState('Explore')
+  const [isClick, setIsClick] = useState('Explore');
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate a loading delay
+    const timer = setTimeout(() => setLoading(false), 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <SkeletonHero />;
+  }
+
   return (
     <div className="relative bg-cover bg-center h-screen" style={{ backgroundImage: "url('https://source.unsplash.com/1600x900/?agriculture')" }}>
       <div className="absolute inset-0 bg-black opacity-50"></div>
@@ -13,7 +27,7 @@ function Hero() {
           Sustainable farming for a better future.
         </p>
         <button
-          onClick={()=>setIsClick('Thank you for Visiting us')}
+          onClick={() => setIsClick('Thank you for Visiting us')}
           className="mt-8 px-8 py-4 text-lg font-medium text-white bg-green-600 rounded-full hover:bg-green-700 transition duration-300 ease-in-out"
         >
           {isClick}

@@ -1,33 +1,40 @@
-import React from 'react'
+// src/pages/Services.js
+import React, { useState, useEffect } from 'react';
+import InteractiveCarousel from './Carousel';
+import ServiceCard from '../components/ServiceCard';
+import SkeletonServices from '../utils/SkeletonServices';
+import { FaTractor, FaSeedling, FaWater } from 'react-icons/fa';
 
-function Services() {
-  
+const services = [
+  { title: 'Farm Equipment Rental', description: 'We offer a wide range of farm equipment for rent.', icon: <FaTractor size={40} /> },
+  { title: 'Seed Supply', description: 'High quality seeds to ensure the best crop yield.', icon: <FaSeedling size={40} /> },
+  { title: 'Irrigation Solutions', description: 'Advanced irrigation solutions for water management.', icon: <FaWater size={40} /> },
+];
+
+const Services = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate a loading delay
+    const timer = setTimeout(() => setLoading(false), 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <SkeletonServices />;
+  }
 
   return (
-    <>
-  <div className='mx-auto px-4'>
-
-      <h2 className="text-4xl font-extrabold dark:text-white">Payments tool for companies</h2>
-      <p className="my-4 text-lg text-gray-500">Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.</p>
-      <p className="mb-4 text-lg font-normal text-gray-500 dark:text-gray-400">Deliver great service experiences fast - without the complexity of traditional ITSM solutions. Accelerate critical development work, eliminate toil, and deploy changes with ease.</p>
-      <a href="#" className="inline-flex items-center text-lg text-blue-600 dark:text-blue-500 hover:underline">
-        Read more
-        <svg className="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-          <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-        </svg>
-      </a>
-
-      <p className="my-4 text-lg text-gray-500">Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.</p>
-      <p className="mb-4 text-lg font-normal text-gray-500 dark:text-gray-400">Deliver great service experiences fast - without the complexity of traditional ITSM solutions. Accelerate critical development work, eliminate toil, and deploy changes with ease.</p>
-      <a href="#" className="inline-flex items-center text-lg text-blue-600 dark:text-blue-500 hover:underline">
-        Read more
-        <svg className="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-          <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-        </svg>
-      </a>
+    <div className="container mx-auto p-4">
+      <h1 className="text-4xl font-bold text-center my-8">Our Services</h1>
+      <InteractiveCarousel />
+      <div className="flex flex-wrap justify-center mt-8">
+        {services.map((service, index) => (
+          <ServiceCard key={index} title={service.title} description={service.description} icon={service.icon} />
+        ))}
       </div>
-    </>
-  )
-}
+    </div>
+  );
+};
 
-export default Services
+export default Services;
