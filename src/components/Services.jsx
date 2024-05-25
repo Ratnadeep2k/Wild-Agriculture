@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import InteractiveCarousel from './Carousel';
 import ServiceCard from '../components/ServiceCard';
-import SkeletonServices from '../utils/SkeletonServices';
 import { FaTractor, FaSeedling, FaWater } from 'react-icons/fa';
 
 const services = [
@@ -12,17 +11,7 @@ const services = [
 ];
 
 const Services = () => {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    // Simulate a loading delay
-    const timer = setTimeout(() => setLoading(false), 1000);
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (loading) {
-    return <SkeletonServices />;
-  }
+ 
 
   return (
     <div className="container mx-auto p-4">

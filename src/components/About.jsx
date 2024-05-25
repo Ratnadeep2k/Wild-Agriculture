@@ -12,14 +12,14 @@ function About() {
       setCards([
         {
           id: 1,
-          title: 'Noteworthy technology acquisitions 2021',
-          image: 'https://flowbite.com/docs/images/blog/image-1.jpg',
-          description: 'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.'
+          title: 'From the Desk of Tonmoy, Founder , Wild Agriculture',
+          image: 'https://res.cloudinary.com/drfaap8zj/image/upload/c_fill,w_859,h_1145,ar_3:4/v1716616910/samples/WildAgriculture/krlfkjbpngfwnxrfnbyh.jpg',
+          description: "It's Tonmoy here, CEO of Wild Agriculture  ,If you're passionate about sustainability, delicious food, and the raw power of nature, then keep an eye on Wild Agriculture. We're just getting started, and we're always looking for people who share our vision of a wilder, more delicious future Onward to the wild side!"
         },
         {
           id: 2,
           title: 'AI advancements in 2024',
-          image: 'https://flowbite.com/docs/images/blog/image-2.jpg',
+          image: 'https://res.cloudinary.com/drfaap8zj/image/upload/c_fill,w_859,h_1145,ar_3:4/v1716616909/samples/WildAgriculture/r5avaavjmkfexeb7w1pd.jpg',
           description: 'A look at the most significant AI advancements in the past year, and what we can expect in the future.'
         },
         {
