@@ -43,6 +43,7 @@ const Dashboard = () => {
           <div key={blog.id} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
             <h2 className="text-xl font-bold mb-2">{blog.title}</h2>
             <p className="mb-4 text-gray-700">{blog.description}</p>
+            <img src={blog.imageUrl} alt={blog.title} className="mb-4 w-full object-cover h-64 sm:h-80 md:h-96 lg:h-[500px]" />
             <div className="flex justify-between items-center">
               <Link to={`/edit/${blog.id}`} className="text-blue-500 hover:text-blue-700 transition duration-300">Edit</Link>
               <button onClick={() => deleteBlog(blog.id)} className="text-red-500 hover:text-red-700 transition duration-300">Delete</button>
