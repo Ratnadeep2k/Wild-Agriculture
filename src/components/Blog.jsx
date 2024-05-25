@@ -3,9 +3,12 @@ import React, { useState, useEffect } from 'react';
 import { db } from '../firebase';
 import { collection, getDocs } from 'firebase/firestore';
 import { Link } from 'react-router-dom';
+import Skl from '../utils/Skl';
 
 const Blog = () => {
   const [blogs, setBlogs] = useState([]);
+  const [loading, setLoading] = useState(true);
+
 
   useEffect(() => {
     const fetchBlogs = async () => {
@@ -13,12 +16,14 @@ const Blog = () => {
       const blogSnapshot = await getDocs(blogCollection);
       const blogList = blogSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
       setBlogs(blogList);
+    
     };
 
     fetchBlogs();
   }, []);
 
   return (
+    blogs.length===0 ? <Skl/> : (
     <div className="container mx-auto p-4">
      
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -34,6 +39,7 @@ const Blog = () => {
         ))}
       </div>
     </div>
+    )
   );
 };
 
