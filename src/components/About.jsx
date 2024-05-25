@@ -31,21 +31,21 @@ function About() {
         // Add more cards as needed
         {
           id: 4,
-          title: 'Work in Progress',
-          image: 'https://flowbite.com/docs/images/blog/image-3.jpg',
-          description: 'An overview of sustainable farming practices and their impact on the environment.'
+          title: 'Foraging: A Foundational Pillar of Wild Agriculture',
+          image: 'https://res.cloudinary.com/drfaap8zj/image/upload/v1716619969/samples/WildAgriculture/ssu8rbdlv8gtpoxt2rid.jpg',
+          description: 'For Wild Agriculture, foraging isnt just a trend, its a core principle. Its about reconnecting with the wild bounty that nature offers and celebrating the traditional practices of indigenous communities who have harvested these foods for generations.'
         },
         {
           id: 5,
-          title: 'Test ',
-          image: 'https://flowbite.com/docs/images/blog/image-3.jpg',
-          description: 'An overview of sustainable farming practices and their impact on the environment.'
+          title: 'Keeping Our World Clean: A Look at Environmental Cleaning',
+          image: 'https://res.cloudinary.com/drfaap8zj/image/upload/v1716620361/samples/WildAgriculture/e3dlefv16gvhd9e7tscl.jpg',
+          description: 'Environmental cleaning goes far beyond the everyday act of tidying up your home. Its a broad term encompassing various practices aimed at protecting and restoring the natural world from pollution and contamination'
         },
         {
           id: 6,
-          title: 'Wild Agriculture ',
-          image: 'https://flowbite.com/docs/images/blog/image-3.jpg',
-          description: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isnt anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.'
+          title: 'The Sunset: A Farewell in Flames',
+          image: 'https://res.cloudinary.com/drfaap8zj/image/upload/v1716616907/samples/WildAgriculture/ya2ta4lukw9hw0tezzwn.jpg',
+          description: 'Sunsets are a blaze of glory, a poignant reminder of the days end. The sun, a giant ball of fire, dips towards the horizon, casting long shadows across the landscape. The sky transforms into a canvas, ablaze with oranges, reds, pinks, and purples.'
         },
       ]);
     }, 1000);
