@@ -12,7 +12,8 @@ import { PrivateRoute } from './components/PrivateRoute'
 import NewBlog from './components/NewBlog'
 import EditBlog from './components/EditBlog'
 import BlogDetail from './components/BlogDetail'
-import Blog from './components/Blog'
+// import Blog from './components/Blog'
+const LazyBlog =React.lazy(()=>import('./components/Blog'))
 
 
 
@@ -24,7 +25,10 @@ function App() {
     <Navbar/>
     <Routes>
       <Route path='/' element={<Home/>} />
-      <Route path='/blog' element={<Blog/>} />
+      <Route path='/blog' element={
+      <React.Suspense fallback='Loading ... '>
+        <LazyBlog/>
+        </React.Suspense>} />
 
       <Route path='/contact' element={<Contact />} />
       <Route path='/about' element={<About />} />
