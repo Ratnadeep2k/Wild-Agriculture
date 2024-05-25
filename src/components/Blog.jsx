@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { db } from '../firebase';
 import { collection, getDocs } from 'firebase/firestore';
 import { Link } from 'react-router-dom';
-import Skl from '../utils/Skl';
+import BlogShimmer from '../utils/BlogShimmer';
 
 const Blog = () => {
   const [blogs, setBlogs] = useState([]);
@@ -23,7 +23,7 @@ const Blog = () => {
   }, []);
 
   return (
-    blogs.length===0 ? <Skl/> : (
+    blogs.length===0 ? <BlogShimmer/> : (
     <div className="container mx-auto p-4">
      
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
