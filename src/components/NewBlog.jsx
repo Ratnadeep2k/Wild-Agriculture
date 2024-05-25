@@ -41,8 +41,16 @@ const NewBlog = () => {
       imageUrl,
       link // Adding link to the blog post
     });
-
-    navigate('/blog');
+    setTitle('');
+    setDescription('');
+    setLink('');
+    setImage(null);
+    toast.success("Blog is Created")
+    setTimeout(() => {
+      navigate('/blog');
+    }, "1000");
+    
+    // navigate('/blog');
   };
 
   return (
