@@ -4,9 +4,9 @@ import { db, storage } from '../firebase';
 import { collection, addDoc } from 'firebase/firestore';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { useNavigate } from 'react-router-dom';
-import { Description } from '@headlessui/react';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
+
 const NewBlog = () => {
   const [title, setTitle] = useState('');
   const [link, setLink] = useState('');
@@ -15,12 +15,19 @@ const NewBlog = () => {
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-
     e.preventDefault();
+
     if (!image) {
-        toast("Image is Required");
-        return;
-      }  
+      toast.error("Image is required");
+      return;
+    }
+
+    const wordCount = description.trim().split(/\s+/).length;
+    if (wordCount < 100) {
+      toast.error(`Description must be at least 100 words. Currently ${wordCount} words.`);
+      return;
+    }
+
     let imageUrl = '';
     if (image) {
       const imageRef = ref(storage, `images/${image.name}`);
@@ -31,7 +38,8 @@ const NewBlog = () => {
     await addDoc(collection(db, 'blogs'), {
       title,
       description,
-      imageUrl
+      imageUrl,
+      link // Adding link to the blog post
     });
 
     navigate('/blog');
@@ -39,46 +47,48 @@ const NewBlog = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">New Blog</h1>
-      <form onSubmit={handleSubmit}>
-        <div className="mb-4">
-          <label className="block mb-2">Title</label>
+      <h1 className="text-3xl font-bold mb-6 text-center">New Blog</h1>
+      <form onSubmit={handleSubmit} className="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-md">
+        <div className="mb-6">
+          <label className="block text-gray-700 text-sm font-bold mb-2">Title</label>
           <input
             type="text"
-            className="w-full p-2 border border-gray-300 rounded"
+            className="w-full p-3 border border-gray-300 rounded-md"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             required
           />
         </div>
-        <div className="mb-4">
-          <label className="block mb-2">Description</label>
+        <div className="mb-6">
+          <label className="block text-gray-700 text-sm font-bold mb-2">Description</label>
           <textarea
-            className="w-full p-2 border border-gray-300 rounded"
+            className="w-full p-3 border border-gray-300 rounded-md"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             required
+            rows="10"
           ></textarea>
         </div>
-        <div className="mb-4">
-            <label className=''>Link For Reference</label>
-            <input
-              type='text'
-              className='w-full p-2 border border-gray-300 rounded'
-              value={link}
-              onChange={(e) => setLink(e.target.value)}
-              required
-              />
-        </div>
-        <div className="mb-4">
-          <label className="block mb-2">Image</label>
+        <div className="mb-6">
+          <label className="block text-gray-700 text-sm font-bold mb-2">Link for Reference</label>
           <input
-            type="file"
-            className="w-full p-2 border border-gray-300 rounded"
-            onChange={(e) => setImage(e.target.files[0])}
+            type="text"
+            className="w-full p-3 border border-gray-300 rounded-md"
+            value={link}
+            onChange={(e) => setLink(e.target.value)}
+            required
           />
         </div>
-        <button type="submit" className="bg-blue-500 text-white py-2 px-4 rounded">Save</button>
+        <div className="mb-6">
+          <label className="block text-gray-700 text-sm font-bold mb-2">Image</label>
+          <input
+            type="file"
+            className="w-full p-3 border border-gray-300 rounded-md"
+            onChange={(e) => setImage(e.target.files[0])}
+            required
+          />
+        </div>
+        <button type="submit" className="w-full bg-blue-500 text-white py-3 px-4 rounded-md hover:bg-blue-700 transition duration-300">Save</button>
         <ToastContainer />
       </form>
     </div>

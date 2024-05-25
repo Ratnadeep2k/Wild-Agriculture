@@ -52,37 +52,38 @@ const EditBlog = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Edit Blog</h1>
-      <form onSubmit={handleSubmit}>
-        <div className="mb-4">
-          <label className="block mb-2">Title</label>
+      <h1 className="text-3xl font-bold mb-6 text-center">Edit Blog</h1>
+      <form onSubmit={handleSubmit} className="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-md">
+        <div className="mb-6">
+          <label className="block text-gray-700 text-sm font-bold mb-2">Title</label>
           <input
             type="text"
-            className="w-full p-2 border border-gray-300 rounded"
+            className="w-full p-3 border border-gray-300 rounded-md"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             required
           />
         </div>
-        <div className="mb-4">
-          <label className="block mb-2">Description</label>
+        <div className="mb-6">
+          <label className="block text-gray-700 text-sm font-bold mb-2">Description</label>
           <textarea
-            className="w-full p-2 border border-gray-300 rounded"
+            className="w-full p-3 border border-gray-300 rounded-md"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             required
+            rows="10"
           ></textarea>
         </div>
-        <div className="mb-4">
-          <label className="block mb-2">Image</label>
-          {existingImageUrl && <img src={existingImageUrl} alt="Blog" className="mb-4 w-32 h-32 object-cover" />}
+        <div className="mb-6">
+          <label className="block text-gray-700 text-sm font-bold mb-2">Image</label>
+          {existingImageUrl && <img src={existingImageUrl} alt="Blog" className="mb-4 w-32 h-32 object-cover rounded-md" />}
           <input
             type="file"
-            className="w-full p-2 border border-gray-300 rounded"
+            className="w-full p-3 border border-gray-300 rounded-md"
             onChange={(e) => setImage(e.target.files[0])}
           />
         </div>
-        <button type="submit" className="bg-blue-500 text-white py-2 px-4 rounded">Update</button>
+        <button type="submit" className="w-full bg-blue-500 text-white py-3 px-4 rounded-md hover:bg-blue-700 transition duration-300">Update</button>
       </form>
     </div>
   );

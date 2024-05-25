@@ -32,6 +32,13 @@ const BlogDetail = () => {
         <img src={blog.imageUrl} alt={blog.title} className="mb-4 w-full object-cover h-64 sm:h-80 md:h-96 lg:h-[500px]" />
       )}
       <p className="text-base md:text-lg lg:text-xl">{blog.description}</p>
+
+<h3 class="text-1xl font-bold dark:text-gray-900 italic">Link For Reference :</h3>
+              {blog.link && (
+                <a href={blog.link} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700 block mb-2">
+                  {blog.link}
+                </a>
+       )}
     </div>
   );
 };
