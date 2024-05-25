@@ -13,7 +13,7 @@ function About() {
         {
           id: 1,
           title: 'From the Desk of Tonmoy, Founder , Wild Agriculture',
-          image: 'https://res.cloudinary.com/drfaap8zj/image/upload/c_fill,w_859,h_1145,ar_3:4/v1716616910/samples/WildAgriculture/krlfkjbpngfwnxrfnbyh.jpg',
+          image: 'https://res-console.cloudinary.com/drfaap8zj/thumbnails/v1/image/upload/v1716616910/c2FtcGxlcy9XaWxkQWdyaWN1bHR1cmUva3JsZmtqYnBuZ2Z3bnhyZm5ieWg=/template_primary/Y19maWxsLHdfODU5LGhfMTE0NSxhcl8zOjQ=',
           description: "It's Tonmoy here, CEO of Wild Agriculture  ,If you're passionate about sustainability, delicious food, and the raw power of nature, then keep an eye on Wild Agriculture. We're just getting started, and we're always looking for people who share our vision of a wilder, more delicious future Onward to the wild side!"
         },
         {
