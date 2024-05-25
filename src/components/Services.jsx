@@ -2,12 +2,14 @@
 import React, { useState, useEffect } from 'react';
 import InteractiveCarousel from './Carousel';
 import ServiceCard from '../components/ServiceCard';
-import { FaTractor, FaSeedling, FaWater } from 'react-icons/fa';
-
+import { FaFish, FaSeedling, FaWater } from 'react-icons/fa';
+import { GiChicken  } from "react-icons/gi";
+import { GrWorkshop } from "react-icons/gr"; 
 const services = [
-  { title: 'Farm Equipment Rental', description: 'We offer a wide range of farm equipment for rent.', icon: <FaTractor size={40} /> },
-  { title: 'Seed Supply', description: 'High quality seeds to ensure the best crop yield.', icon: <FaSeedling size={40} /> },
-  { title: 'Irrigation Solutions', description: 'Advanced irrigation solutions for water management.', icon: <FaWater size={40} /> },
+  { title: 'Fisheries', description: 'We partner with responsible fishing communities who practice sustainable harvesting methods, ensuring the long-term health of the ecosystems that provide our delicious seafood', icon: <FaFish size={40} /> },
+  { title: 'Broilar Farm', description: 'We help broiler farms raise healthy, high-quality chickens with our specialized feed and supplements.', icon: <GiChicken size={40} /> },
+  { title: 'Seed Supply', description: 'Grow Your Dreams: The Widest Selection of Top-Tier Seeds', icon: <FaSeedling size={40} /> },
+  { title: 'WorkShop', description: 'Seed Your Future: Practical Skills for Sustainable Farming', icon: <GrWorkshop size={40} /> },
 ];
 
 const Services = () => {

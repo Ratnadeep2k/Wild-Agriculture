@@ -2,11 +2,12 @@
 import React, { useState } from 'react';
 
 const images = [
-  'https://flowbite.com/docs/images/carousel/carousel-3.svg',
-  'https://flowbite.com/docs/images/carousel/carousel-4.svg',
-  'https://flowbite.com/docs/images/carousel/carousel-5.svg',
-  'https://flowbite.com/docs/images/carousel/carousel-2.svg',
-  'https://flowbite.com/docs/images/carousel/carousel-1.svg',
+  'https://res.cloudinary.com/drfaap8zj/image/upload/v1716616910/samples/WildAgriculture/tdbupuhkz5wsgh4dsj26.jpg',
+  'https://res.cloudinary.com/drfaap8zj/image/upload/v1716620305/samples/WildAgriculture/vq4dijuadr3sthwdewau.jpg',
+  'https://res.cloudinary.com/drfaap8zj/image/upload/v1716616908/samples/WildAgriculture/x93i6tl8mhztqunmhz2v.jpg',
+  'https://res.cloudinary.com/drfaap8zj/image/upload/v1716619969/samples/WildAgriculture/ssu8rbdlv8gtpoxt2rid.jpg',
+  'https://res.cloudinary.com/drfaap8zj/image/upload/v1716616909/samples/WildAgriculture/tgkc8dpbck020sxfupi1.jpg',
+  'https://res.cloudinary.com/drfaap8zj/image/upload/v1716616909/samples/WildAgriculture/lounh3plpuazlwjblixt.jpg',
 ];
 
 const Carousel = () => {
