@@ -25,8 +25,8 @@ function About() {
         {
           id: 3,
           title: 'Sustainable farming practices',
-          image: 'https://flowbite.com/docs/images/blog/image-3.jpg',
-          description: 'An overview of sustainable farming practices and their impact on the environment.'
+          image: 'https://res.cloudinary.com/drfaap8zj/image/upload/v1716616908/samples/WildAgriculture/ebsgmrj45uw7fqqrfufd.jpg',
+          description: 'Sustainable farming practices are all about growing food in a way that meets the needs of the present without compromising the ability of future generations to meet their own needs. It is a delicate balance between productivity, environmental health, and social responsibility. Here are some key sustainable farming practices'
         },
         // Add more cards as needed
         {
