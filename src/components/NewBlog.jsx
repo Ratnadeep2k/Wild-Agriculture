@@ -4,7 +4,9 @@ import { db, storage } from '../firebase';
 import { collection, addDoc } from 'firebase/firestore';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { useNavigate } from 'react-router-dom';
-
+import { Description } from '@headlessui/react';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
 const NewBlog = () => {
   const [title, setTitle] = useState('');
   const [link, setLink] = useState('');
@@ -13,7 +15,12 @@ const NewBlog = () => {
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
+
     e.preventDefault();
+    if (!image) {
+        toast("Image is Required");
+        return;
+      }  
     let imageUrl = '';
     if (image) {
       const imageRef = ref(storage, `images/${image.name}`);
@@ -27,7 +34,7 @@ const NewBlog = () => {
       imageUrl
     });
 
-    navigate('/');
+    navigate('/blog');
   };
 
   return (
@@ -72,6 +79,7 @@ const NewBlog = () => {
           />
         </div>
         <button type="submit" className="bg-blue-500 text-white py-2 px-4 rounded">Save</button>
+        <ToastContainer />
       </form>
     </div>
   );

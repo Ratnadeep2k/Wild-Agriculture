@@ -23,7 +23,7 @@ const Blog = () => {
      
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {blogs.map(blog => (
-          <div key={blog.id} className="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow duration-300">
+          <div key={blog.id} className="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow duration-500">
             <h2 className="text-xl font-bold mb-2">{blog.title}</h2>
             {blog.imageUrl && (
               <img src={blog.imageUrl} alt={blog.title} className="w-full h-40 object-cover rounded mb-2" />
