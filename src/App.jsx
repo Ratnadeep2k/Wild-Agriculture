@@ -6,7 +6,15 @@ import Navbar from './components/Navbar'
 import Services from './components/Services'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-import { Login } from './components/Login'
+import  Login  from './components/Login'
+import Dashboard from './components/Dashboard'
+import { PrivateRoute } from './components/PrivateRoute'
+import NewBlog from './components/NewBlog'
+import EditBlog from './components/EditBlog'
+import BlogDetail from './components/BlogDetail'
+import Blog from './components/Blog'
+
+
 
 
 function App() {
@@ -16,13 +24,17 @@ function App() {
     <Navbar/>
     <Routes>
       <Route path='/' element={<Home/>} />
+      <Route path='/blog' element={<Blog/>} />
+
       <Route path='/contact' element={<Contact />} />
       <Route path='/about' element={<About />} />
       <Route path='/services' element={<Services/>} />
       <Route path='/login' element={<Login/>} />
+      <Route path="/edit/:id" element={<PrivateRoute><EditBlog/></PrivateRoute>} />
+        <Route path="/new" element={<PrivateRoute><NewBlog/></PrivateRoute> }/>
+        <Route path="/blog/:id" element={<BlogDetail />} />
+        <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
       <Route path='*' element={<Navigate to='/' />} />
-
-
       
     </Routes>
     <Footer />
