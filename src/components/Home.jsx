@@ -8,7 +8,7 @@ function Hero() {
   };
 
   return (
-    <div className="relative h-screen bg-cover bg-center" style={{ backgroundImage:  "url('https://images.unsplash.com/photo-1716404084927-176ee37a9dbe?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')" }}>
+    <div className="relative h-screen bg-cover bg-center" style={{ backgroundImage:  "url('https://img.freepik.com/premium-photo/environmentally-friendly-practices_810293-301715.jpg')" }}>
       <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className="container mx-auto flex flex-col items-center justify-center h-full relative z-10 px-4 text-center">
         <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">

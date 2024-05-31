@@ -16,13 +16,13 @@ function Contact() {
     e.preventDefault();
     if (!name || !email || !message) {
       // If any field is empty, show a toast notification
-      notifyError();
+      toast.error("Error , Please Try Again")
       return;
     }
     
-    const serviceId = 'service_dn7ke8a'
-    const templateId = 'template_ga7v3st'
-    const publicKey = 'OoKiCanTPfQOkiCm-'
+    const serviceId = 'service_83x5gjv'
+    const templateId = 'template_i87q4uf'
+    const publicKey = '8fOclG6F6vhoUWBt0'
 
     const templateParams = {
       from_name: name,
@@ -33,7 +33,7 @@ function Contact() {
     };
     emailjs.send(serviceId, templateId, templateParams, publicKey).then((response) => {
       console.log('SUCCESS!', response.status, response.text);
-      notifySuccess();
+      toast.success("Your Message sent successfully ")
       setName('');
       setEmail('');
       setMessage('');
