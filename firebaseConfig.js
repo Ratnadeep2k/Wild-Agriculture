@@ -1,4 +1,4 @@
- const firebaseConfig = {
+const firebaseConfig = {
     apiKey: "AIzaSyCSDkMncsHs-8RxWW80g2OZB0a07qLRDL0",
     authDomain: "wild-agriculture-a120c.firebaseapp.com",
     projectId: "wild-agriculture-a120c",
