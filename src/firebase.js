@@ -6,13 +6,13 @@ import { getStorage } from "firebase/storage";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDxbdfb21aSaod7XId7PMeT2fgK8YWwojQ",
-  authDomain: "wild-agriculture.firebaseapp.com",
-  projectId: "wild-agriculture",
-  storageBucket: "wild-agriculture.appspot.com",
-  messagingSenderId: "964950598729",
-  appId: "1:964950598729:web:9cc42849ffcd34b30f4b98",
-  measurementId: "G-5RQ58S79QT"
+  apiKey: "AIzaSyCSDkMncsHs-8RxWW80g2OZB0a07qLRDL0",
+  authDomain: "wild-agriculture-a120c.firebaseapp.com",
+  projectId: "wild-agriculture-a120c",
+  storageBucket: "wild-agriculture-a120c.appspot.com",
+  messagingSenderId: "897206796254",
+  appId: "1:897206796254:web:b86cfa32a18091f846e74f",
+  measurementId: "G-RS9Q4G3786"
 };
 
 // Initialize Firebase
