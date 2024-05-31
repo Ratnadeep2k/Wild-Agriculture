@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Hero() {
   const [buttonText, setButtonText] = useState('Explore');
+  const navigate = useNavigate()
 
   const handleClick = () => {
-    setButtonText('Thank you for Visiting us');
+    navigate('/about')
   };
 
   return (
@@ -19,7 +21,7 @@ function Hero() {
         </p>
         <button
           onClick={handleClick}
-          className="mt-8 px-8 py-4 text-lg font-medium text-white bg-green-600 rounded-full hover:bg-green-700 transition duration-300 ease-in-out"
+          className="mt-8 px-8 py-4 text-lg font-medium text-white bg-green-600 rounded-lg hover:bg-green-300 transition duration-300 ease-in-out"
           aria-label="Explore or Thank you message button"
         >
           {buttonText}
