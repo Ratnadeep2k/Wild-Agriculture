@@ -12,13 +12,34 @@ function Contact() {
   const navigate = useNavigate();
   const notifySuccess = () => toast("Your Message Sent Successfully!");
   const notifyError = () => toast("Failed to send your message!");
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+    return emailRegex.test(email);
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!name || !email || !message) {
-      // If any field is empty, show a toast notification
-      toast.error("Error , Please Try Again")
+    if(!name && !email && !message){
+      toast.error("Enter your details to send the message")
       return;
     }
+    if (!name) {
+      // If any field is empty, show a toast notification
+      toast.error("Error ,Please enter your name")
+      return;
+    }
+    if (!email) {
+      toast.error("Email is required");
+      return;
+    } else if (!validateEmail(email)) {
+      toast.error("Invalid email address");
+      return;
+    }
+    if(!message){
+      toast.error("Error ,Please enter your message")
+      return;
+    }
+  
     
     const serviceId = 'service_83x5gjv'
     const templateId = 'template_i87q4uf'
