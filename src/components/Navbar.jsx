@@ -8,7 +8,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className="bg-white border-gray-200 dark:bg-green-900 opacity-90 shadow-lg ">
+      <nav className=" border-gray-200 dark:bg-green-900 opacity-90 shadow-lg ">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a href="/" className="flex items-center space-x-3">
             <img src="https://www.svgrepo.com/show/503806/earth.svg" className="h-12" alt="Logo" />
