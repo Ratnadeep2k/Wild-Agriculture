@@ -23,7 +23,7 @@ const Blog = () => {
 
   return (
     loading ? <BlogShimmer/> : (
-      <div className="container mx-auto p-4">
+      <div className="container mx-auto p-4 mb-16 mt-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {blogs.map(blog => (
             <div key={blog.id} className="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow duration-500">
