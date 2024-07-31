@@ -67,7 +67,7 @@ function Contact() {
   }
   return (
     <>
-      <form onSubmit={handleSubmit} className='w-full max-w-sm mx-auto bg-white p-6 rounded-lg shadow-md'>
+      <form onSubmit={handleSubmit} className='w-full max-w-sm mx-auto bg-white p-6 rounded-lg shadow-md mb-12 mt-12'>
         <h2 className='text-2xl font-bold mb-4 text-center'>Contact Us</h2>
         <div className='mb-4'>
           <label htmlFor='name' className='block text-gray-700 font-bold mb-2'>
