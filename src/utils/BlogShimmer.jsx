@@ -2,6 +2,7 @@ import React from 'react';
 
 function BlogShimmer() {
     return (
+        <div className='min-h-screen'>
         <div className="container mx-auto p-4 flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0">
             <div role="status" className="max-w-sm w-full p-4 border border-gray-200 rounded shadow animate-pulse dark:border-gray-700">
                 <div className="flex items-center justify-center h-48 mb-4 bg-gray-300 rounded dark:bg-gray-700">
@@ -71,6 +72,7 @@ function BlogShimmer() {
                 <span className="sr-only">Loading...</span>
             </div>
         </div>
+     </div>
      </div>
         
     );
